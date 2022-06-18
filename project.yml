@@ -1,0 +1,84 @@
+name: AccountLogin
+
+############
+# Options
+############
+
+options:
+  bundleIdPrefix: com.jill.app
+  xcodeVersion: "13.2.1"
+  deploymentTarget:
+    iOS: 13.0
+
+############
+# Schemes
+############
+
+schemes: 
+  AccountLogin:
+    build:
+      targets:
+        AccountLogin: all         
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: true
+      coverageTargets:
+        - AccountLogin
+      targets:  
+        - name: AccountLoginTests 
+          randomExecutionOrder: true  
+    profile: 
+      config: Debug 
+    analyze:
+      config: Debug
+    archive: 
+      config: Debug
+      
+############
+# Targets
+############
+
+targets:
+
+  # -----------
+  # AccountLogin
+  # -----------
+
+  AccountLogin:
+    type: application   
+    platform: iOS
+    
+    # sources 
+    sources: 
+      - path: AccountLogin 
+
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1,2
+        CODE_SIGN_STYLE: Manual
+        INFOPLIST_FILE: AccountLogin/Info.plist
+        EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
+
+  # -----------
+  # AccountLoginTests
+  # -----------
+
+  AccountLoginTests:
+    type: bundle.unit-test
+    platform: iOS
+
+    # sources
+    sources:
+      - AccountLoginTests
+
+    # dependencies
+    dependencies:
+      - target: AccountLogin
+      
+    settings:
+      base:
+        CODE_SIGN_STYLE: Manual
+        INFOPLIST_FILE: AccountLoginTests/Info.plist
+        EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
