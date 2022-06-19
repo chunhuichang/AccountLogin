@@ -11,8 +11,8 @@
 		506D0ACDCF9756A99F202C48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB64408F5459371DB70CFAC /* SceneDelegate.swift */; };
 		50B183FC9B0F5A01CA342E5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F97200417D35B9BFB87B91 /* LaunchScreen.storyboard */; };
 		66321665B83844982BE01F89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F4447B85B46BD1A7110D0 /* AppDelegate.swift */; };
-		B666A95FA9986735EF2C6763 /* AccountLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF9E742D966F447A751586 /* AccountLoginTests.swift */; };
 		C917C40928E98E2CC936AC21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938347D3FDCE1CF357CA2D62 /* ViewController.swift */; };
+		CD477C8A2C05E869A53FBBE8 /* LoginUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,11 +27,11 @@
 
 /* Begin PBXFileReference section */
 		1FB64408F5459371DB70CFAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTests.swift; sourceTree = "<group>"; };
 		379001089BDF6053ED0DC0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		938347D3FDCE1CF357CA2D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9998727AD396B38875C78149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2C8E5C493F1A3AE468DE8B6 /* AccountLogin.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AccountLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8AF9E742D966F447A751586 /* AccountLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoginTests.swift; sourceTree = "<group>"; };
 		CE068594F01B31E003FE3916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8123A34405DD54E4DC03F6C /* AccountLoginTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AccountLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7F4447B85B46BD1A7110D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +39,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		4CCF686C9B8D8D93C05F35D5 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				85753405C04BCAE791BC3FAA /* Login */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		5D2BF1FAB454EAAA23ADBAEA = {
 			isa = PBXGroup;
 			children = (
@@ -48,11 +56,27 @@
 			);
 			sourceTree = "<group>";
 		};
+		85753405C04BCAE791BC3FAA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A2D148785F482637759B4FE3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4CCF686C9B8D8D93C05F35D5 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		B778568ABBA162458ADCDA4E /* AccountLoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8AF9E742D966F447A751586 /* AccountLoginTests.swift */,
 				FC0DC23EF54103D85D5F19E1 /* Info.plist */,
+				A2D148785F482637759B4FE3 /* Domain */,
 			);
 			path = AccountLoginTests;
 			sourceTree = "<group>";
@@ -165,7 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B666A95FA9986735EF2C6763 /* AccountLoginTests.swift in Sources */,
+				CD477C8A2C05E869A53FBBE8 /* LoginUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
