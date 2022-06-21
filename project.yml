@@ -58,7 +58,7 @@ targets:
       base:
         TARGETED_DEVICE_FAMILY: 1,2
         CODE_SIGN_STYLE: Manual
-        INFOPLIST_FILE: AccountLogin/Info.plist
+        INFOPLIST_FILE: AccountLogin/Resource/Info.plist
         EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
 
   # -----------
@@ -76,7 +76,7 @@ targets:
     # dependencies
     dependencies:
       - target: AccountLogin
-      
+
     settings:
       base:
         CODE_SIGN_STYLE: Manual
