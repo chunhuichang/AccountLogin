@@ -9,7 +9,7 @@ import Foundation
 
 // Input
 public protocol LoginVMInput {
-    var loginTrigger: Box<(userName: String, password: String)> { get }
+    func loginAction(userName: String?, password: String?)
 }
 
 // Output
@@ -31,7 +31,6 @@ public final class LoginViewModel: LoginVMInput, LoginVMOutput, LoginVMManager {
     
     public init(_ usecase: LoginUseCase) {
         self.usecase = usecase
-        self.bindingInOut()
     }
     
     public var input: LoginVMInput {
@@ -41,35 +40,34 @@ public final class LoginViewModel: LoginVMInput, LoginVMOutput, LoginVMManager {
         return self
     }
     
-    // input
-    public var loginTrigger: Box<(userName: String, password: String)> = Box(nil)
-    
     //output
     public var isLoading: Box<Bool> = Box(false)
     public var alertMessage: Box<(title: String, message: String)> = Box(nil)
     public var userData: Box<LoginUserEntity> = Box(nil)
 }
 
-// MARK: input binding
+// input
 extension LoginViewModel {
-    private func bindingInOut() {
-        loginTrigger.binding(trigger: false) { [weak self] newValue, _ in
-            guard let self = self, let loginData = newValue else { return }
-            
-            var param = [String: String]()
-            param["username"] = loginData.userName
-            param["password"] = loginData.password
-            self.isLoading.value = true
-            self.usecase?.signon(param: param, with: { result in
-                self.isLoading.value = false
-                switch result {
-                case .success(let entity):
-                    self.userData.value = entity
-                    
-                case.failure(let error):
-                    self.alertMessage.value = (title: "Error", message: error.localizedDescription)
-                }
-            })
+    public func loginAction(userName: String?, password: String?) {
+        guard let userName = userName, let password = password else {
+            self.alertMessage.value = (title: "Error", message: "user name or password is nil")
+            return
         }
+        
+        var param = [String: String]()
+        param["username"] = userName
+        param["password"] = password
+        self.isLoading.value = true
+        self.usecase?.signon(param: param, with: { result in
+            self.isLoading.value = false
+            switch result {
+            case .success(let entity):
+                self.userData.value = entity
+                
+                self.alertMessage.value = (title: "Success", message: "get user info object")
+            case.failure(let error):
+                self.alertMessage.value = (title: "Error", message: error.localizedDescription)
+            }
+        })
     }
 }

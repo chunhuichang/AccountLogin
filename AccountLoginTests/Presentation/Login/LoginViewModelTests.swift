@@ -30,7 +30,7 @@ class LoginViewModelTests: XCTestCase {
             exp.fulfill()
         }
         
-        sut.input.loginTrigger.value = ("username","password")
+        sut.input.loginAction(userName: "username", password: "password")
         
         wait(for: [exp], timeout: 1.0)
     }
@@ -65,7 +65,7 @@ class LoginViewModelTests: XCTestCase {
             exp.fulfill()
         }
         
-        sut.input.loginTrigger.value = ("username","password")
+        sut.input.loginAction(userName: "username", password: "password")
         
         wait(for: [exp], timeout: 1.0)
     }
