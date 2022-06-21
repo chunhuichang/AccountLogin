@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E698D19C3EE11F063AFD863 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F12F703976FCAF5D2F32B9 /* AppCoordinator.swift */; };
 		21B8EB7C5046AF5037326D2A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1083D155BCBAFF0B22D004 /* LoginViewModelTests.swift */; };
 		35B71B4E426C9175D1E09A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F5488FC7F7F09D3F69A47B /* LaunchScreen.storyboard */; };
 		459D6337584E3C8164D9F37C /* LoginUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */; };
 		6952AA9212ED4CCC3B801B1D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8357E988B1C97864A2338B1 /* Box.swift */; };
 		6A2917EDCE8712C807AE1C23 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6BAC129DAB6B83FE9F9FF3 /* LoginViewModel.swift */; };
 		81F6AD72BD7EE65E620AA244 /* LoginUserEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4A2125871C78AD988841D /* LoginUserEntityTests.swift */; };
+		91D46DA09E3AA913C743F6E0 /* LoginMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */; };
 		AD0026884DCF2A2ECEDACB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A392712D97E0BC2E43D88A /* SceneDelegate.swift */; };
 		AF3D55574C1935A5389A0757 /* LoginUserDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0679E109C7B9753FA2FEEBA /* LoginUserDTO+Mapping.swift */; };
 		C27AD2524A456269FDBF8DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213BE0AE87848439A02A0527 /* Assets.xcassets */; };
-		C917C40928E98E2CC936AC21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938347D3FDCE1CF357CA2D62 /* ViewController.swift */; };
 		CD477C8A2C05E869A53FBBE8 /* LoginUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */; };
 		CFCB0587C64603C756049B5F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968B066BC68D155E4A83A68 /* XCTestCase+MemoryLeakTracking.swift */; };
 		D6079F197B6574AD861028DA /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9DF9D1197A9AE0CB106C6 /* LoginRepository.swift */; };
+		DD2BDC7A2F14B9FA09F98893 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606AA27E850FA10EE28CF6C /* LoginViewController.swift */; };
 		E08A280CC637DC42725E6707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1623997D4E078F2048073 /* AppDelegate.swift */; };
 		EC25F353D9A512EF13174DE8 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1FBED2F27CE60D45D6D43 /* LoginUseCase.swift */; };
+		F4F95FF3B06672D85936C6F5 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D98A695F6E83DB57D3805 /* AppDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +42,16 @@
 		1D6BAC129DAB6B83FE9F9FF3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		213BE0AE87848439A02A0527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTests.swift; sourceTree = "<group>"; };
+		2606AA27E850FA10EE28CF6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		331D98A695F6E83DB57D3805 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMockRepository.swift; sourceTree = "<group>"; };
 		5FD1623997D4E078F2048073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEntity.swift; sourceTree = "<group>"; };
+		71F12F703976FCAF5D2F32B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		79FBBC3C82E0E8CDC08C9763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82A392712D97E0BC2E43D88A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		83393844514D954D985F17C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		86F9DF9D1197A9AE0CB106C6 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
-		938347D3FDCE1CF357CA2D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98B4A2125871C78AD988841D /* LoginUserEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEntityTests.swift; sourceTree = "<group>"; };
 		A2C8E5C493F1A3AE468DE8B6 /* AccountLogin.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AccountLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A968B066BC68D155E4A83A68 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -60,7 +66,9 @@
 		01B7D70CAE7B18653A4D43A0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				71F12F703976FCAF5D2F32B9 /* AppCoordinator.swift */,
 				5FD1623997D4E078F2048073 /* AppDelegate.swift */,
+				331D98A695F6E83DB57D3805 /* AppDIContainer.swift */,
 				82A392712D97E0BC2E43D88A /* SceneDelegate.swift */,
 			);
 			path = Application;
@@ -207,10 +215,10 @@
 		C38689B2B5E9061F5F07A6EC /* AccountLogin */ = {
 			isa = PBXGroup;
 			children = (
-				938347D3FDCE1CF357CA2D62 /* ViewController.swift */,
 				01B7D70CAE7B18653A4D43A0 /* Application */,
 				E17A51C9F4E4B91225C873BF /* Data */,
 				046F08451A047F3C4E4D1971 /* Domain */,
+				CEBDD3E5BED72ABD958BD56B /* Mocks */,
 				A2D2914CF175B53E4C663B64 /* Presentation */,
 				76558B990D68FFCFFF58E055 /* Resource */,
 			);
@@ -223,6 +231,14 @@
 				B0796396503D492B5A1E96A1 /* Login */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CEBDD3E5BED72ABD958BD56B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		CED49A0F38BD4D12AEAEB7EE /* Entities */ = {
@@ -261,6 +277,7 @@
 		F3C3024EB8574B111F9088BA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2606AA27E850FA10EE28CF6C /* LoginViewController.swift */,
 				1D6BAC129DAB6B83FE9F9FF3 /* LoginViewModel.swift */,
 			);
 			path = Login;
@@ -363,15 +380,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E698D19C3EE11F063AFD863 /* AppCoordinator.swift in Sources */,
+				F4F95FF3B06672D85936C6F5 /* AppDIContainer.swift in Sources */,
 				E08A280CC637DC42725E6707 /* AppDelegate.swift in Sources */,
 				6952AA9212ED4CCC3B801B1D /* Box.swift in Sources */,
+				91D46DA09E3AA913C743F6E0 /* LoginMockRepository.swift in Sources */,
 				D6079F197B6574AD861028DA /* LoginRepository.swift in Sources */,
 				EC25F353D9A512EF13174DE8 /* LoginUseCase.swift in Sources */,
 				AF3D55574C1935A5389A0757 /* LoginUserDTO+Mapping.swift in Sources */,
 				459D6337584E3C8164D9F37C /* LoginUserEntity.swift in Sources */,
+				DD2BDC7A2F14B9FA09F98893 /* LoginViewController.swift in Sources */,
 				6A2917EDCE8712C807AE1C23 /* LoginViewModel.swift in Sources */,
 				AD0026884DCF2A2ECEDACB74 /* SceneDelegate.swift in Sources */,
-				C917C40928E98E2CC936AC21 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
