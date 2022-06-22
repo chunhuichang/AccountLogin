@@ -80,11 +80,7 @@ class LoginViewModelTests: XCTestCase {
         trackForMemoryLeaks(usecase, file: file, line: line)
         return (sut, usecase)
     }
-    
-    private func paramData() -> [String : Any] {
-        return ["username": "user1", "password":"password1"]
-    }
-    
+        
     private func failureNSError() -> NSError {
         return NSError(domain: "any error", code: 0)
     }
