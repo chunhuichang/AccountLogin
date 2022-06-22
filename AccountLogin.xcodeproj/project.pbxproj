@@ -13,6 +13,7 @@
 		459D6337584E3C8164D9F37C /* LoginUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */; };
 		6952AA9212ED4CCC3B801B1D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8357E988B1C97864A2338B1 /* Box.swift */; };
 		6A2917EDCE8712C807AE1C23 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6BAC129DAB6B83FE9F9FF3 /* LoginViewModel.swift */; };
+		7C9B90FF1DB66AEAF9EE974F /* UpdateUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25C63E85F2F4A4580443C /* UpdateUserRepository.swift */; };
 		81F6AD72BD7EE65E620AA244 /* LoginUserEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4A2125871C78AD988841D /* LoginUserEntityTests.swift */; };
 		91D46DA09E3AA913C743F6E0 /* LoginMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */; };
 		A96A5D8A00298A5A6F578BEC /* UpdateUserEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E05A732E7A883256954DA /* UpdateUserEntityTests.swift */; };
@@ -23,8 +24,10 @@
 		CFCB0587C64603C756049B5F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968B066BC68D155E4A83A68 /* XCTestCase+MemoryLeakTracking.swift */; };
 		D329C21259F2ED1BFB7314CA /* UpdateUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5D62F8640488F85B6C2CDD /* UpdateUserEntity.swift */; };
 		D6079F197B6574AD861028DA /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9DF9D1197A9AE0CB106C6 /* LoginRepository.swift */; };
+		D7422283A976D26B4EF48AF2 /* UpdateUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4741DA15F3F5F11F6652253F /* UpdateUserUseCaseTests.swift */; };
 		DD2BDC7A2F14B9FA09F98893 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606AA27E850FA10EE28CF6C /* LoginViewController.swift */; };
 		E08A280CC637DC42725E6707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1623997D4E078F2048073 /* AppDelegate.swift */; };
+		EB0CAE0C4F47E33097643AFF /* UpdateUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D8781ABC50405E73F54215 /* UpdateUserUseCase.swift */; };
 		EC25F353D9A512EF13174DE8 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1FBED2F27CE60D45D6D43 /* LoginUseCase.swift */; };
 		F4F95FF3B06672D85936C6F5 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D98A695F6E83DB57D3805 /* AppDIContainer.swift */; };
 		FE17E4C641C16964B0F4898D /* UpdateUserDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A806878706CAEF672EEBE5F /* UpdateUserDTO+Mapping.swift */; };
@@ -46,9 +49,11 @@
 		213BE0AE87848439A02A0527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTests.swift; sourceTree = "<group>"; };
 		2606AA27E850FA10EE28CF6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		28D8781ABC50405E73F54215 /* UpdateUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserUseCase.swift; sourceTree = "<group>"; };
 		331D98A695F6E83DB57D3805 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMockRepository.swift; sourceTree = "<group>"; };
 		3A806878706CAEF672EEBE5F /* UpdateUserDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateUserDTO+Mapping.swift"; sourceTree = "<group>"; };
+		4741DA15F3F5F11F6652253F /* UpdateUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserUseCaseTests.swift; sourceTree = "<group>"; };
 		5FD1623997D4E078F2048073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEntity.swift; sourceTree = "<group>"; };
 		71F12F703976FCAF5D2F32B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		A968B066BC68D155E4A83A68 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		B8A1FBED2F27CE60D45D6D43 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		C0679E109C7B9753FA2FEEBA /* LoginUserDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginUserDTO+Mapping.swift"; sourceTree = "<group>"; };
+		C0C25C63E85F2F4A4580443C /* UpdateUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRepository.swift; sourceTree = "<group>"; };
 		CF5D62F8640488F85B6C2CDD /* UpdateUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserEntity.swift; sourceTree = "<group>"; };
 		D8357E988B1C97864A2338B1 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		E8123A34405DD54E4DC03F6C /* AccountLoginTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AccountLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,10 +121,19 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
+		32F6E2EA35481A692D33F23B /* UpdateUser */ = {
+			isa = PBXGroup;
+			children = (
+				4741DA15F3F5F11F6652253F /* UpdateUserUseCaseTests.swift */,
+			);
+			path = UpdateUser;
+			sourceTree = "<group>";
+		};
 		4CCF686C9B8D8D93C05F35D5 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				85753405C04BCAE791BC3FAA /* Login */,
+				32F6E2EA35481A692D33F23B /* UpdateUser */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -162,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				86F9DF9D1197A9AE0CB106C6 /* LoginRepository.swift */,
+				C0C25C63E85F2F4A4580443C /* UpdateUserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -262,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				B8A1FBED2F27CE60D45D6D43 /* LoginUseCase.swift */,
+				28D8781ABC50405E73F54215 /* UpdateUserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -382,6 +399,7 @@
 				81F6AD72BD7EE65E620AA244 /* LoginUserEntityTests.swift in Sources */,
 				21B8EB7C5046AF5037326D2A /* LoginViewModelTests.swift in Sources */,
 				A96A5D8A00298A5A6F578BEC /* UpdateUserEntityTests.swift in Sources */,
+				D7422283A976D26B4EF48AF2 /* UpdateUserUseCaseTests.swift in Sources */,
 				CFCB0587C64603C756049B5F /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +422,8 @@
 				AD0026884DCF2A2ECEDACB74 /* SceneDelegate.swift in Sources */,
 				FE17E4C641C16964B0F4898D /* UpdateUserDTO+Mapping.swift in Sources */,
 				D329C21259F2ED1BFB7314CA /* UpdateUserEntity.swift in Sources */,
+				7C9B90FF1DB66AEAF9EE974F /* UpdateUserRepository.swift in Sources */,
+				EB0CAE0C4F47E33097643AFF /* UpdateUserUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
