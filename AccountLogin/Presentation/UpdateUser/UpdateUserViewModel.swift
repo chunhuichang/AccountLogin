@@ -66,7 +66,7 @@ extension UpdateUserViewModel {
             case .success(let entity):
                 self.userData.value = entity
                 
-                self.alertMessage.value = (title: "Success", message: "get user info object")
+                self.alertMessage.value = (title: "Success", message: "update user info object")
             case.failure(let error):
                 self.alertMessage.value = (title: "Error", message: error.localizedDescription)
             }

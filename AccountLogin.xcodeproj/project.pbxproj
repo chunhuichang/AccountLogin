@@ -11,6 +11,7 @@
 		21B8EB7C5046AF5037326D2A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1083D155BCBAFF0B22D004 /* LoginViewModelTests.swift */; };
 		35B71B4E426C9175D1E09A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F5488FC7F7F09D3F69A47B /* LaunchScreen.storyboard */; };
 		459D6337584E3C8164D9F37C /* LoginUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */; };
+		5471FF7DCBAF49004AFF10A0 /* UpdateUserMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464F3249308DA622A2D8BF7 /* UpdateUserMockRepository.swift */; };
 		5B3D1F65EE7129F0B471EC2C /* UpdateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDA3B5C68BA888B0C7272A /* UpdateUserViewModel.swift */; };
 		6952AA9212ED4CCC3B801B1D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8357E988B1C97864A2338B1 /* Box.swift */; };
 		6A2917EDCE8712C807AE1C23 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6BAC129DAB6B83FE9F9FF3 /* LoginViewModel.swift */; };
@@ -20,6 +21,7 @@
 		A96A5D8A00298A5A6F578BEC /* UpdateUserEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E05A732E7A883256954DA /* UpdateUserEntityTests.swift */; };
 		AD0026884DCF2A2ECEDACB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A392712D97E0BC2E43D88A /* SceneDelegate.swift */; };
 		AF3D55574C1935A5389A0757 /* LoginUserDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0679E109C7B9753FA2FEEBA /* LoginUserDTO+Mapping.swift */; };
+		B14144C719C6B588DF10BF8D /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704ED77BA959A9E52C68A1A1 /* UpdateUserViewController.swift */; };
 		C27AD2524A456269FDBF8DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213BE0AE87848439A02A0527 /* Assets.xcassets */; };
 		CD477C8A2C05E869A53FBBE8 /* LoginUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */; };
 		CFCB0587C64603C756049B5F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968B066BC68D155E4A83A68 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -59,6 +61,7 @@
 		5FD1623997D4E078F2048073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		625DE173637D1EC0FE3A31E8 /* UpdateUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewModelTests.swift; sourceTree = "<group>"; };
 		701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEntity.swift; sourceTree = "<group>"; };
+		704ED77BA959A9E52C68A1A1 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
 		70EDA3B5C68BA888B0C7272A /* UpdateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewModel.swift; sourceTree = "<group>"; };
 		71F12F703976FCAF5D2F32B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		79FBBC3C82E0E8CDC08C9763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		8D7E05A732E7A883256954DA /* UpdateUserEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserEntityTests.swift; sourceTree = "<group>"; };
 		98B4A2125871C78AD988841D /* LoginUserEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEntityTests.swift; sourceTree = "<group>"; };
 		A2C8E5C493F1A3AE468DE8B6 /* AccountLogin.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AccountLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A464F3249308DA622A2D8BF7 /* UpdateUserMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserMockRepository.swift; sourceTree = "<group>"; };
 		A968B066BC68D155E4A83A68 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		B8A1FBED2F27CE60D45D6D43 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		C0679E109C7B9753FA2FEEBA /* LoginUserDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginUserDTO+Mapping.swift"; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 		CE86D94D9DCAC5E97C9D73EE /* UpdateUser */ = {
 			isa = PBXGroup;
 			children = (
+				704ED77BA959A9E52C68A1A1 /* UpdateUserViewController.swift */,
 				70EDA3B5C68BA888B0C7272A /* UpdateUserViewModel.swift */,
 			);
 			path = UpdateUser;
@@ -275,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */,
+				A464F3249308DA622A2D8BF7 /* UpdateUserMockRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -437,8 +443,10 @@
 				AD0026884DCF2A2ECEDACB74 /* SceneDelegate.swift in Sources */,
 				FE17E4C641C16964B0F4898D /* UpdateUserDTO+Mapping.swift in Sources */,
 				D329C21259F2ED1BFB7314CA /* UpdateUserEntity.swift in Sources */,
+				5471FF7DCBAF49004AFF10A0 /* UpdateUserMockRepository.swift in Sources */,
 				7C9B90FF1DB66AEAF9EE974F /* UpdateUserRepository.swift in Sources */,
 				EB0CAE0C4F47E33097643AFF /* UpdateUserUseCase.swift in Sources */,
+				B14144C719C6B588DF10BF8D /* UpdateUserViewController.swift in Sources */,
 				5B3D1F65EE7129F0B471EC2C /* UpdateUserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
