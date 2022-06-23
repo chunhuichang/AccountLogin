@@ -41,7 +41,7 @@ class UpdateUserViewController: UIViewController {
             let textField: UITextField
         }
         
-        let rows = [Row(label: "Time Zone:", textField: timezoneTextField), Row(label: "Number", textField: numberTextField), Row(label: "Phone", textField: phoneTextField)]
+        let rows = [Row(label: "Time Zone:", textField: timezoneTextField), Row(label: "Number:", textField: numberTextField), Row(label: "Phone:", textField: phoneTextField)]
         
         var views = [UIView]()
         
@@ -92,11 +92,12 @@ class UpdateUserViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18)
         button.layer.cornerRadius = 5.0
-        button.addTarget(nil, action: #selector(loginAction(_:)), for: .touchUpInside)
+        button.addTarget(nil, action: #selector(updateUserAction(_:)), for: .touchUpInside)
         return button
     }()
     
-    @objc private func loginAction(_ sender: UIButton) {
+    @objc private func updateUserAction(_ sender: UIButton) {
+        [self.timezoneTextField, self.numberTextField, self.phoneTextField].forEach { $0.resignFirstResponder() }
         self.viewModel.input.updateUserAction(timezone: timezoneTextField.text, number: numberTextField.text, phone: phoneTextField.text)
     }
     
@@ -190,7 +191,7 @@ private extension UpdateUserViewController {
             }
         }
         
-        output.alertMessage.binding { newValue, _ in
+        output.alertMessage.binding(trigger: false) { newValue, _ in
             let alertController = UIAlertController(title: newValue?.0,
                                                     message: newValue?.1, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
