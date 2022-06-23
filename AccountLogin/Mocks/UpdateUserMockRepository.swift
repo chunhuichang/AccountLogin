@@ -8,7 +8,7 @@
 import Foundation
 
 final class UpdateUserMockRepository: UpdateUserRepository {
-    func updateUser(param: [String : Any], with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void) {
+    func updateUser(param: [String : Any], userObject: LoginUserEntity? = nil, with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void) {
         guard let entity = self.updateUserEntity else {
             completion(.failure(NSError(domain: "Error", code: 0)))
             return

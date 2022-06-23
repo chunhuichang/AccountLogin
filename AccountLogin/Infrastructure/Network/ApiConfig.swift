@@ -18,8 +18,9 @@ public enum HTTPRestfulType: String {
 
 public protocol ApiConfig {
     var host: String { get }
-    var path: String { get }
+    var path: String { get set }
     var method: HTTPRestfulType { get }
+    var sessionToken: String? { get set }
     var queryParameters: [String: Any]? { get set }
     var bodyParamaters: [String: Any]? { get set }
 }

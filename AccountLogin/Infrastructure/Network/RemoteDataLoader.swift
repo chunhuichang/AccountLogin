@@ -63,6 +63,9 @@ public final class RemoteDataLoader: DataServiceLoader {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("vqYuKPOkLQLYHhk4QTGsGKFwATT4mBIGREI2m8eD", forHTTPHeaderField: "X-Parse-Application-Id")
         request.addValue("", forHTTPHeaderField: "X-Parse-REST-API-Key")
+        if let sessionToken = config.sessionToken {
+            request.addValue(sessionToken, forHTTPHeaderField: "X-Parse-Session-Token")
+        }
         
         if let apiParams = config.bodyParamaters, !apiParams.isEmpty {
             request.httpBody = apiParams.retriveData()

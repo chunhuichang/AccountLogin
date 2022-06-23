@@ -51,7 +51,7 @@ extension LoginSceneDIContainer: LoginCoordinatorDependencies {
     
     // MARK: - DIContainers of scenes
     public func makeUpdateUserSceneDIContainer() -> UpdateUserSceneDIContainer {
-        let dependencies = UpdateUserSceneDIContainer.Dependencies()
+        let dependencies = UpdateUserSceneDIContainer.Dependencies(loadDataLoader: self.dependencies.loadDataLoader)
         return UpdateUserSceneDIContainer(dependencies: dependencies)
     }
 }

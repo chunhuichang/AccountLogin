@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol UpdateUserUseCase {
-    func updateUser(param: [String : Any], with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void)
+    func updateUser(param: [String : Any], userObject: LoginUserEntity?, with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void)
 }
 
 public final class MainUpdateUserUseCase {
@@ -20,8 +20,8 @@ public final class MainUpdateUserUseCase {
 }
 
 extension MainUpdateUserUseCase: UpdateUserUseCase {
-    public func updateUser(param: [String : Any], with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void) {
-        self.repository.updateUser(param: param) { result in
+    public func updateUser(param: [String : Any], userObject: LoginUserEntity? = nil, with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void) {
+        self.repository.updateUser(param: param, userObject: userObject) { result in
             completion(result)
         }
     }

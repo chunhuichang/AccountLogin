@@ -56,12 +56,12 @@ extension UpdateUserViewModel {
         }
         
         var param = [String: Any]()
-        param["timezone"] = timezone
-        param["number"] = number
+        param["timezone"] = Int(timezone)
+        param["number"] = Int(number)
         param["phone"] = phone
         
         self.isLoading.value = true
-        self.usecase?.updateUser(param: param, with: { result in
+        self.usecase?.updateUser(param: param, userObject: self.userObject.value, with: { result in
             self.isLoading.value = false
             switch result {
             case .success:

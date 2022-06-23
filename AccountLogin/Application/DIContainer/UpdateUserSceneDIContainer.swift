@@ -14,6 +14,7 @@ public protocol UpdateUserCoordinatorDependencies  {
 
 public final class UpdateUserSceneDIContainer {
     struct Dependencies {
+        let loadDataLoader: DataServiceLoader
     }
     
     private let dependencies: Dependencies
@@ -31,9 +32,9 @@ public final class UpdateUserSceneDIContainer {
 extension UpdateUserSceneDIContainer: UpdateUserCoordinatorDependencies {
     public func makeUpdateUserViewController(param: UpdateUserCoordinator.Params? = nil) -> UIViewController {
         // Data layer
-        //        let repository = MainUpdateUserRepository()
+        let repository = MainUpdateUserRepository(loadDataLoader: self.dependencies.loadDataLoader)
         // Mock
-        let repository = UpdateUserMockRepository()
+//        let repository = UpdateUserMockRepository()
         
         // Domain layer
         let usecase = MainUpdateUserUseCase(repository: repository)

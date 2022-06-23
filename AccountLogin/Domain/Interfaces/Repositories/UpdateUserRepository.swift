@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol UpdateUserRepository {
-    func updateUser(param: [String : Any], with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void)
+    func updateUser(param: [String : Any], userObject: LoginUserEntity?, with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void)
 }

@@ -197,7 +197,9 @@ private extension UpdateUserViewController {
                                                     message: newValue?.1, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
         
         output.userObject.binding { [weak self] newValue, _ in

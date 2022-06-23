@@ -1,20 +1,20 @@
 //
-//  LoginApi.swift
+//  UpdateUserApi.swift
 //  AccountLogin
 //
-//  Created by Jill Chang on 2022/6/23.
+//  Created by Jill Chang on 2022/6/24.
 //
 
 import Foundation
 
-public struct LoginApi: ApiConfig {
+public struct UpdateUserApi: ApiConfig {
     public let host = "watch-master-staging.herokuapp.com"
     
-    public var path = "/api/login"
+    public var path = "/api/users/"
     
-    public let method = HTTPRestfulType.post
+    public let method = HTTPRestfulType.put
     
-    public var sessionToken: String? = nil
+    public var sessionToken: String?
     
     public var queryParameters: [String : Any]? = nil
     

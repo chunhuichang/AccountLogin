@@ -102,7 +102,7 @@ class UpdateUserViewModelTests: XCTestCase {
             return NSError(domain: "any error", code: 0)
         }
         
-        func updateUser(param: [String : Any], with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void) {
+        func updateUser(param: [String : Any], userObject: LoginUserEntity?, with completion: @escaping (Result<UpdateUserEntity, Error>) -> Void) {
             guard let result = updateUserResult else {
                 completion(.failure(failureNSError()))
                 return
