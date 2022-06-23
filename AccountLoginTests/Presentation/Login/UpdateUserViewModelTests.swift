@@ -43,6 +43,7 @@ class UpdateUserViewModelTests: XCTestCase {
         usecase.updateUserResult = .success(predicateEntity)
         
         let exp = expectation(description: "Wait for UpdateUser")
+        exp.expectedFulfillmentCount = 2
         
         sut.output.userData.binding(trigger: false) { [weak usecase] newValue, _ in
             guard let entity = newValue else {
@@ -53,6 +54,18 @@ class UpdateUserViewModelTests: XCTestCase {
             XCTAssertEqual(entity.updatedAt, predicateEntity.updatedAt)
             
             XCTAssertEqual(usecase?.updateUserResults.count, 1)
+            
+            exp.fulfill()
+        }
+        
+        sut.output.alertMessage.binding(trigger: false) { newValue, _ in
+            guard let msg = newValue else {
+                XCTFail("alertMessage is invaild")
+                return
+            }
+            
+            XCTAssertEqual(msg.title, "Success")
+            XCTAssertEqual(msg.message, "update user info object")
             
             exp.fulfill()
         }
