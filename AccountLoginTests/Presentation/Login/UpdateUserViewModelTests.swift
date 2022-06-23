@@ -9,6 +9,27 @@ import XCTest
 import AccountLogin
 
 class UpdateUserViewModelTests: XCTestCase {
+    func test_initUpdateUser_getUserObject() {
+        let (sut, _) = makeSUT()
+        
+        let predicateEntity = LoginUserEntity(objectID: "objectID", username: "username@qq.com", code: "code", timezone: 20, parameter: 8, number: 5, phone: "0900000000", timeZone: "Asia/Taipei", timone: "10", sessionToken: "r:pnktnjyb996sj4p156gjtp4im")
+        
+        let exp = expectation(description: "Wait for UpdateUser")
+        
+        sut.output.userObject.binding(trigger: false) { newValue, _ in
+            
+            XCTAssertEqual(newValue?.timezone, predicateEntity.timezone)
+            XCTAssertEqual(newValue?.number, predicateEntity.number)
+            XCTAssertEqual(newValue?.phone, predicateEntity.phone)
+            
+            exp.fulfill()
+        }
+        
+        sut.userObject.value = predicateEntity
+        
+        wait(for: [exp], timeout: 1.0)
+    }
+    
     func test_errorDataTriggerUpdateUser_failureUpdateUserAlertError() {
         let (sut, usecase) = makeSUT()
         
@@ -43,20 +64,6 @@ class UpdateUserViewModelTests: XCTestCase {
         usecase.updateUserResult = .success(predicateEntity)
         
         let exp = expectation(description: "Wait for UpdateUser")
-        exp.expectedFulfillmentCount = 2
-        
-        sut.output.userData.binding(trigger: false) { [weak usecase] newValue, _ in
-            guard let entity = newValue else {
-                XCTFail("userData is invaild")
-                return
-            }
-            
-            XCTAssertEqual(entity.updatedAt, predicateEntity.updatedAt)
-            
-            XCTAssertEqual(usecase?.updateUserResults.count, 1)
-            
-            exp.fulfill()
-        }
         
         sut.output.alertMessage.binding(trigger: false) { newValue, _ in
             guard let msg = newValue else {

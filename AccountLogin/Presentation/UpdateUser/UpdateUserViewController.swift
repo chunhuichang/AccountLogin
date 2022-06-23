@@ -184,19 +184,28 @@ private extension UpdateUserViewController {
     private func UIBinding() {
         let output = self.viewModel.output
         
-        output.isLoading.binding {[weak self] newValue, _ in
+        output.isLoading.binding { [weak self] newValue, _ in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.showActivityIndicator(newValue ?? false)
             }
         }
         
-        output.alertMessage.binding(trigger: false) { newValue, _ in
+        output.alertMessage.binding(trigger: false) { [weak self] newValue, _ in
+            guard let self = self else { return }
             let alertController = UIAlertController(title: newValue?.0,
                                                     message: newValue?.1, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
+        }
+        
+        output.userObject.binding { [weak self] newValue, _ in
+            guard let self = self, let entity = newValue else { return }
+            
+            self.timezoneTextField.text = String( entity.timezone)
+            self.numberTextField.text = String( entity.number)
+            self.phoneTextField.text = entity.phone
         }
     }
 }

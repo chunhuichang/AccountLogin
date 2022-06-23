@@ -14,7 +14,9 @@ public protocol UpdateUserDelegate: AnyObject {}
 public protocol UpdateUserCoordinatorDelegate: AnyObject {}
 
 public final class UpdateUserCoordinator {
-    public struct Params {}
+    public struct Params {
+        let userEntity: LoginUserEntity
+    }
     
     private weak var navigationController: UINavigationController?
     private let dependencies: UpdateUserCoordinatorDependencies

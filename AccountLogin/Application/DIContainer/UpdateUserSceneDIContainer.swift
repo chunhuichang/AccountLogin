@@ -39,7 +39,7 @@ extension UpdateUserSceneDIContainer: UpdateUserCoordinatorDependencies {
         let usecase = MainUpdateUserUseCase(repository: repository)
         
         // Presentation layer
-        let vm = UpdateUserViewModel(usecase)
+        let vm = UpdateUserViewModel(usecase, param: param)
         
         let view = UpdateUserViewController(viewModel: vm)
         return view
