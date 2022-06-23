@@ -16,6 +16,7 @@ public protocol LoginCoordinatorDependencies  {
 
 public final class LoginSceneDIContainer {
     struct Dependencies {
+        let loadDataLoader: DataServiceLoader
     }
     
     private let dependencies: Dependencies
@@ -34,9 +35,9 @@ extension LoginSceneDIContainer: LoginCoordinatorDependencies {
     public func makeLoginViewController(param: LoginCoordinator.Params?) -> UIViewController {
         
         // Data layer
-        //        let repository = MainLoginRepository()
+        let repository = MainLoginRepository(loadDataLoader: self.dependencies.loadDataLoader)
         // Mock
-        let repository = LoginMockRepository()
+//        let repository = LoginMockRepository()
         
         // Domain layer
         let usecase = MainLoginUseCase(repository: repository)

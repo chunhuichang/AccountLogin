@@ -9,12 +9,12 @@ import UIKit
 
 public final class AppDIContainer {
     
+    // MARK: - Network
+    let loadDataLoader = RemoteDataLoader()
     
     // MARK: - DIContainers of scenes
     func makeLoginSceneDIContainer() -> LoginSceneDIContainer {
-        let dependencies = LoginSceneDIContainer.Dependencies()
+        let dependencies = LoginSceneDIContainer.Dependencies(loadDataLoader: loadDataLoader)
         return LoginSceneDIContainer(dependencies: dependencies)
     }
 }
-
-
