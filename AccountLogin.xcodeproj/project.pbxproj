@@ -13,11 +13,14 @@
 		459D6337584E3C8164D9F37C /* LoginUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */; };
 		5471FF7DCBAF49004AFF10A0 /* UpdateUserMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464F3249308DA622A2D8BF7 /* UpdateUserMockRepository.swift */; };
 		5B3D1F65EE7129F0B471EC2C /* UpdateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EDA3B5C68BA888B0C7272A /* UpdateUserViewModel.swift */; };
+		63D921F788601C2CD2C834FB /* LoginSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EEC83832AC8287E6894DB1 /* LoginSceneDIContainer.swift */; };
 		6952AA9212ED4CCC3B801B1D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8357E988B1C97864A2338B1 /* Box.swift */; };
 		6A2917EDCE8712C807AE1C23 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6BAC129DAB6B83FE9F9FF3 /* LoginViewModel.swift */; };
 		7C9B90FF1DB66AEAF9EE974F /* UpdateUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C25C63E85F2F4A4580443C /* UpdateUserRepository.swift */; };
 		81F6AD72BD7EE65E620AA244 /* LoginUserEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4A2125871C78AD988841D /* LoginUserEntityTests.swift */; };
+		871BA088832FFE8829A5D186 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128E1035BDDF614076FF7DD /* AppDIContainer.swift */; };
 		91D46DA09E3AA913C743F6E0 /* LoginMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */; };
+		9EDC726FFBE689D5C6C5FDC0 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CD855D0DC7ACD0C679FD47 /* LoginCoordinator.swift */; };
 		A96A5D8A00298A5A6F578BEC /* UpdateUserEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E05A732E7A883256954DA /* UpdateUserEntityTests.swift */; };
 		AD0026884DCF2A2ECEDACB74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A392712D97E0BC2E43D88A /* SceneDelegate.swift */; };
 		AF3D55574C1935A5389A0757 /* LoginUserDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0679E109C7B9753FA2FEEBA /* LoginUserDTO+Mapping.swift */; };
@@ -33,7 +36,6 @@
 		EB0CAE0C4F47E33097643AFF /* UpdateUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D8781ABC50405E73F54215 /* UpdateUserUseCase.swift */; };
 		EC25F353D9A512EF13174DE8 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1FBED2F27CE60D45D6D43 /* LoginUseCase.swift */; };
 		F12E7108678DF4A6478DA591 /* UpdateUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625DE173637D1EC0FE3A31E8 /* UpdateUserViewModelTests.swift */; };
-		F4F95FF3B06672D85936C6F5 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D98A695F6E83DB57D3805 /* AppDIContainer.swift */; };
 		FE17E4C641C16964B0F4898D /* UpdateUserDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A806878706CAEF672EEBE5F /* UpdateUserDTO+Mapping.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +56,11 @@
 		21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTests.swift; sourceTree = "<group>"; };
 		2606AA27E850FA10EE28CF6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28D8781ABC50405E73F54215 /* UpdateUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserUseCase.swift; sourceTree = "<group>"; };
-		331D98A695F6E83DB57D3805 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		3544C2CCFFB568893CCA2477 /* LoginMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMockRepository.swift; sourceTree = "<group>"; };
 		3A806878706CAEF672EEBE5F /* UpdateUserDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UpdateUserDTO+Mapping.swift"; sourceTree = "<group>"; };
 		4741DA15F3F5F11F6652253F /* UpdateUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserUseCaseTests.swift; sourceTree = "<group>"; };
 		5FD1623997D4E078F2048073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		60EEC83832AC8287E6894DB1 /* LoginSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneDIContainer.swift; sourceTree = "<group>"; };
 		625DE173637D1EC0FE3A31E8 /* UpdateUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewModelTests.swift; sourceTree = "<group>"; };
 		701D8305C5BC1B97CE2F8914 /* LoginUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEntity.swift; sourceTree = "<group>"; };
 		704ED77BA959A9E52C68A1A1 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
@@ -73,12 +75,14 @@
 		A2C8E5C493F1A3AE468DE8B6 /* AccountLogin.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AccountLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A464F3249308DA622A2D8BF7 /* UpdateUserMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserMockRepository.swift; sourceTree = "<group>"; };
 		A968B066BC68D155E4A83A68 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		B6CD855D0DC7ACD0C679FD47 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		B8A1FBED2F27CE60D45D6D43 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		C0679E109C7B9753FA2FEEBA /* LoginUserDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginUserDTO+Mapping.swift"; sourceTree = "<group>"; };
 		C0C25C63E85F2F4A4580443C /* UpdateUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRepository.swift; sourceTree = "<group>"; };
 		CF5D62F8640488F85B6C2CDD /* UpdateUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserEntity.swift; sourceTree = "<group>"; };
 		D8357E988B1C97864A2338B1 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		E8123A34405DD54E4DC03F6C /* AccountLoginTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AccountLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F128E1035BDDF614076FF7DD /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		FC0DC23EF54103D85D5F19E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +92,8 @@
 			children = (
 				71F12F703976FCAF5D2F32B9 /* AppCoordinator.swift */,
 				5FD1623997D4E078F2048073 /* AppDelegate.swift */,
-				331D98A695F6E83DB57D3805 /* AppDIContainer.swift */,
 				82A392712D97E0BC2E43D88A /* SceneDelegate.swift */,
+				86764D7B2044A63E454F2AB5 /* DIContainer */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -196,6 +200,15 @@
 				21C503F774274E80D0019ACC /* LoginUseCaseTests.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		86764D7B2044A63E454F2AB5 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				F128E1035BDDF614076FF7DD /* AppDIContainer.swift */,
+				60EEC83832AC8287E6894DB1 /* LoginSceneDIContainer.swift */,
+			);
+			path = DIContainer;
 			sourceTree = "<group>";
 		};
 		A2D148785F482637759B4FE3 /* Domain */ = {
@@ -323,6 +336,7 @@
 		F3C3024EB8574B111F9088BA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B6CD855D0DC7ACD0C679FD47 /* LoginCoordinator.swift */,
 				2606AA27E850FA10EE28CF6C /* LoginViewController.swift */,
 				1D6BAC129DAB6B83FE9F9FF3 /* LoginViewModel.swift */,
 			);
@@ -430,11 +444,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E698D19C3EE11F063AFD863 /* AppCoordinator.swift in Sources */,
-				F4F95FF3B06672D85936C6F5 /* AppDIContainer.swift in Sources */,
+				871BA088832FFE8829A5D186 /* AppDIContainer.swift in Sources */,
 				E08A280CC637DC42725E6707 /* AppDelegate.swift in Sources */,
 				6952AA9212ED4CCC3B801B1D /* Box.swift in Sources */,
+				9EDC726FFBE689D5C6C5FDC0 /* LoginCoordinator.swift in Sources */,
 				91D46DA09E3AA913C743F6E0 /* LoginMockRepository.swift in Sources */,
 				D6079F197B6574AD861028DA /* LoginRepository.swift in Sources */,
+				63D921F788601C2CD2C834FB /* LoginSceneDIContainer.swift in Sources */,
 				EC25F353D9A512EF13174DE8 /* LoginUseCase.swift in Sources */,
 				AF3D55574C1935A5389A0757 /* LoginUserDTO+Mapping.swift in Sources */,
 				459D6337584E3C8164D9F37C /* LoginUserEntity.swift in Sources */,

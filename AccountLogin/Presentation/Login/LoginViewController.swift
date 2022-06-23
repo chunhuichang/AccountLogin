@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
         return UIView()
     }()
     
-    private let viewModel: LoginVMManager
+    public var viewModel: LoginVMManager
     
     init(viewModel: LoginVMManager) {
         self.viewModel = viewModel
@@ -136,7 +136,7 @@ private extension LoginViewController {
             }
         }
         
-        output.alertMessage.binding { newValue, _ in
+        output.alertMessage.binding(trigger: false) { newValue, _ in
             let alertController = UIAlertController(title: newValue?.0,
                                                     message: newValue?.1, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)

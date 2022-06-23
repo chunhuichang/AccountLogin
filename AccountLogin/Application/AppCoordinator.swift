@@ -8,22 +8,17 @@
 import UIKit
 
 public final class AppCoordinator {
-    public var rootVC: UIViewController?
-    
+    private let navigationController: UINavigationController
     private let appDIContainer: AppDIContainer
     
-    public init(appDIContainer: AppDIContainer) {
-        self.appDIContainer = AppDIContainer()
+    public init(navigationController: UINavigationController, appDIContainer: AppDIContainer) {
+        self.navigationController = navigationController
+        self.appDIContainer = appDIContainer
     }
     
     public func start() {
-//        let loadDataLoader = RemoteDataLoader()
-//        let repository = MainTopListRepository(managedObjectContext: managedObjectContext)
-        // Mock
-        let repository = LoginMockRepository()
-        let usecase = MainLoginUseCase(repository: repository)
-        let vm = LoginViewModel(usecase)
-//        vm.delegate = self
-        self.rootVC =  LoginViewController(viewModel: vm)
+        let loginDIContainer = appDIContainer.makeLoginSceneDIContainer()
+        let coordinator = loginDIContainer.makeLoginCoordinator(navigationController: navigationController)
+        coordinator.start()
     }
 }
