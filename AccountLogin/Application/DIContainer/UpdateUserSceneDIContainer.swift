@@ -23,13 +23,13 @@ public final class UpdateUserSceneDIContainer {
     }
     
     // MARK: - Flow Coordinators
-    func makeUpdateUserCoordinator(navigationController: UINavigationController?) -> UpdateUserCoordinator {
-        return UpdateUserCoordinator(navigationController: navigationController, dependencies: self)
+    func makeUpdateUserCoordinator(navigationController: UINavigationController?, param: UpdateUserCoordinator.Params?) -> UpdateUserCoordinator {
+        return UpdateUserCoordinator(navigationController: navigationController, dependencies: self, param: param)
     }
 }
 
 extension UpdateUserSceneDIContainer: UpdateUserCoordinatorDependencies {
-    public func makeUpdateUserViewController(param: UpdateUserCoordinator.Params?) -> UIViewController {
+    public func makeUpdateUserViewController(param: UpdateUserCoordinator.Params? = nil) -> UIViewController {
         // Data layer
         //        let repository = MainUpdateUserRepository()
         // Mock

@@ -20,14 +20,16 @@ public final class UpdateUserCoordinator {
     
     private weak var navigationController: UINavigationController?
     private let dependencies: UpdateUserCoordinatorDependencies
+    private let param: UpdateUserCoordinator.Params?
     
-    public init(navigationController: UINavigationController?, dependencies: UpdateUserCoordinatorDependencies) {
+    public init(navigationController: UINavigationController?, dependencies: UpdateUserCoordinatorDependencies, param: UpdateUserCoordinator.Params? = nil) {
         self.navigationController = navigationController
         self.dependencies = dependencies
+        self.param = param
     }
     
     public func start() {
-        guard let vc = dependencies.makeUpdateUserViewController(param: nil) as? UpdateUserViewController else {
+        guard let vc = dependencies.makeUpdateUserViewController(param: self.param) as? UpdateUserViewController else {
             fatalError("Casting to ViewController fail")
         }
         navigationController?.setViewControllers([vc], animated: true)

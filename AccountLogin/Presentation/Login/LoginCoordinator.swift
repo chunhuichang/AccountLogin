@@ -12,7 +12,7 @@ public protocol LoginDelegate: AnyObject {}
 
 // Current Coordinator go to next Coordinator
 public protocol LoginCoordinatorDelegate: AnyObject {
-    func showUpdateUser()
+    func showUpdateUser(entity: LoginUserEntity)
 }
 
 public final class LoginCoordinator {
@@ -36,9 +36,9 @@ public final class LoginCoordinator {
 }
 
 extension LoginCoordinator: LoginCoordinatorDelegate {
-    public func showUpdateUser() {
+    public func showUpdateUser(entity: LoginUserEntity) {
         let DIContainer = dependencies.makeUpdateUserSceneDIContainer()
-        let coordinator = DIContainer.makeUpdateUserCoordinator(navigationController: navigationController)
+        let coordinator = DIContainer.makeUpdateUserCoordinator(navigationController: navigationController, param: UpdateUserCoordinator.Params(userEntity: entity))
         coordinator.start()
     }
 }

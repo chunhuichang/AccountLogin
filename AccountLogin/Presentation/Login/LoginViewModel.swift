@@ -10,7 +10,7 @@ import Foundation
 // Input
 public protocol LoginVMInput {
     func loginAction(userName: String?, password: String?)
-    func showUpdateUserAction()
+    func showUpdateUserAction(entity: LoginUserEntity)
 }
 
 // Output
@@ -67,13 +67,13 @@ extension LoginViewModel {
             case .success(let entity):
                 self.userData.value = entity
                 
-                self.showUpdateUserAction()
+                self.showUpdateUserAction(entity: entity)
             case.failure(let error):
                 self.alertMessage.value = (title: "Error", message: error.localizedDescription)
             }
         })
     }
-    public func showUpdateUserAction() {
-        self.coordinatorDelegate?.showUpdateUser()
+    public func showUpdateUserAction(entity: LoginUserEntity) {
+        self.coordinatorDelegate?.showUpdateUser(entity: entity)
     }
 }
