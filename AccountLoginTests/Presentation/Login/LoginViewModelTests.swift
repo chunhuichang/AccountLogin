@@ -41,33 +41,23 @@ class LoginViewModelTests: XCTestCase {
         let predicateEntity = LoginUserEntity(objectID: "objectID", username: "username@qq.com", code: "code", timezone: 20, parameter: 8, number: 5, phone: "0900000000", timeZone: "Asia/Taipei", timone: "10", sessionToken: "r:pnktnjyb996sj4p156gjtp4im")
         
         usecase.signonResult = .success(predicateEntity)
+        let mockDelegate = MockLoginCoordinatorDelegate(testCase: self)
+        sut.coordinatorDelegate = mockDelegate
         
-        let exp = expectation(description: "Wait for login")
-        
-        sut.output.userData.binding(trigger: false) { [weak usecase] newValue, _ in
-            guard let entity = newValue else {
-                XCTFail("userData is invaild")
-                return
-            }
-            
-            XCTAssertEqual(entity.objectID, predicateEntity.objectID)
-            XCTAssertEqual(entity.username, predicateEntity.username)
-            XCTAssertEqual(entity.timezone, predicateEntity.timezone)
-            XCTAssertEqual(entity.parameter, predicateEntity.parameter)
-            XCTAssertEqual(entity.number, predicateEntity.number)
-            XCTAssertEqual(entity.phone, predicateEntity.phone)
-            XCTAssertEqual(entity.timeZone, predicateEntity.timeZone)
-            XCTAssertEqual(entity.timone, predicateEntity.timone)
-            XCTAssertEqual(entity.sessionToken, predicateEntity.sessionToken)
-            
-            XCTAssertEqual(usecase?.signonResults.count, 1)
-            
-            exp.fulfill()
-        }
-        
+        mockDelegate.expectUpdateUserEntity()
         sut.input.loginAction(userName: "username", password: "password")
         
-        wait(for: [exp], timeout: 1.0)
+        waitForExpectations(timeout: 1.0)
+        
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.objectID, predicateEntity.objectID)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.username, predicateEntity.username)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.timezone, predicateEntity.timezone)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.parameter, predicateEntity.parameter)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.number, predicateEntity.number)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.phone, predicateEntity.phone)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.timeZone, predicateEntity.timeZone)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.timone, predicateEntity.timone)
+        XCTAssertEqual(mockDelegate.showUpdateUserEntity?.sessionToken, predicateEntity.sessionToken)
     }
     
     
@@ -101,5 +91,28 @@ class LoginViewModelTests: XCTestCase {
         
         var signonResult: Result<LoginUserEntity, Error>?
         var signonResults: [Result<LoginUserEntity, Error>] = []
+    }
+    
+    private class MockLoginCoordinatorDelegate: LoginCoordinatorDelegate {
+        var showUpdateUserEntity: LoginUserEntity?
+        private var expectation: XCTestExpectation?
+        private let testCase: XCTestCase
+        
+        init(testCase: XCTestCase) {
+            self.testCase = testCase
+        }
+        
+        func expectUpdateUserEntity() {
+            expectation = testCase.expectation(description: "Expect showUpdateUserEntity")
+        }
+        
+        func showUpdateUser(entity: LoginUserEntity) {
+            if expectation != nil {
+                self.showUpdateUserEntity = entity
+            }
+            expectation?.fulfill()
+            expectation = nil
+            
+        }
     }
 }

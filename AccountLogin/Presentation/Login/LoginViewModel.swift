@@ -17,7 +17,6 @@ public protocol LoginVMInput {
 public protocol LoginVMOutput {
     var isLoading: Box<Bool> { get }
     var alertMessage: Box<(title: String, message: String)> { get }
-    var userData: Box<LoginUserEntity> { get }
 }
 // Manager
 public protocol LoginVMManager {
@@ -46,7 +45,6 @@ public final class LoginViewModel: LoginVMInput, LoginVMOutput, LoginVMManager {
     //output
     public var isLoading: Box<Bool> = Box(false)
     public var alertMessage: Box<(title: String, message: String)> = Box(nil)
-    public var userData: Box<LoginUserEntity> = Box(nil)
 }
 
 // input
@@ -65,8 +63,6 @@ extension LoginViewModel {
             self.isLoading.value = false
             switch result {
             case .success(let entity):
-                self.userData.value = entity
-                
                 self.showUpdateUserAction(entity: entity)
             case.failure(let error):
                 self.alertMessage.value = (title: "Error", message: error.localizedDescription)
