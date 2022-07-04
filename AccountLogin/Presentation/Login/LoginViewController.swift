@@ -8,23 +8,21 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    private lazy var userNameTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.placeholder = "Enter user name"
-        textField.borderStyle = .roundedRect
-        textField.clearButtonMode = .whileEditing
-        return textField
+    private lazy var userNameTextField: HintTextView = {
+        let textview = HintTextView()
+        textview.hintLabel.text = "User Name:"
+        textview.textField.placeholder = "Enter user name"
+        textview.textField.clearButtonMode = .whileEditing
+        return textview
     }()
     
-    private lazy var passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .white
-        textField.placeholder = "Enter password"
-        textField.borderStyle = .roundedRect
-        textField.clearButtonMode = .whileEditing
-        textField.isSecureTextEntry = true
-        return textField
+    private lazy var passwordTextField: HintTextView = {
+        let textview = HintTextView()
+        textview.hintLabel.text = "Password:"
+        textview.textField.placeholder = "Enter password"
+        textview.textField.clearButtonMode = .whileEditing
+        textview.textField.isSecureTextEntry = true
+        return textview
     }()
     
     private lazy var loginButton: UIButton = {
@@ -39,7 +37,7 @@ class LoginViewController: UIViewController {
     }()
     
     @objc private func loginAction(_ sender: UIButton) {
-        self.viewModel.input.loginAction(userName: userNameTextField.text, password: passwordTextField.text)
+        self.viewModel.input.loginAction(userName: userNameTextField.textField.text, password: passwordTextField.textField.text)
     }
     
     private lazy var loadingActivity: UIActivityIndicatorView = {
@@ -78,7 +76,7 @@ class LoginViewController: UIViewController {
 // MARK: UI Setting
 private extension LoginViewController {
     private func setupUI() {
-        self.view.backgroundColor = UIColor(displayP3Red: 224.0/255.0, green: 216.0/255.0, blue: 200.0/255.0, alpha: 1)
+        self.view.backgroundColor = .white
         
         [userNameTextField, passwordTextField, loginButton, loadingActivity, loadingView].forEach { [superView = self.view] in
             superView?.addSubview($0)
@@ -86,15 +84,15 @@ private extension LoginViewController {
         }
         
         NSLayoutConstraint.activate([
-            userNameTextField.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            userNameTextField.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 30),
             userNameTextField.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             userNameTextField.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            userNameTextField.heightAnchor.constraint(equalToConstant: 50),
+            userNameTextField.heightAnchor.constraint(equalToConstant: 75),
             
             passwordTextField.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 150),
             passwordTextField.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             passwordTextField.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 75),
             
             loginButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 350),
             loginButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
